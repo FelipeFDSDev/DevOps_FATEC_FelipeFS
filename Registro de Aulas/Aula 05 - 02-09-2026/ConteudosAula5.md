@@ -1,213 +1,278 @@
-Aula — GitHub Actions e Pipelines Automatizadas
+# ⚙️ GitHub Actions e Pipelines Automatizadas
 
-Disciplina: DevOps — FATEC
-Tema: GitHub Actions e automação de pipelines
-Atividade: Utilização de Actions do GitHub Marketplace
+> **Disciplina:** DevOps — FATEC
+> **Atividade:** GitHub Actions e Automação de Pipelines
+---
 
-📚 Resumo da Aula
+## 📌 Sobre a Aula
 
-Nesta aula, aprendi mais sobre o GitHub Actions e como ele pode ser utilizado para automatizar diversas etapas do desenvolvimento de um projeto.
+Durante esta aula, aprendi sobre o **GitHub Actions** e como ele pode ser utilizado para automatizar diferentes processos dentro de um projeto.
 
-Inicialmente, o professor explicou o funcionamento do GitHub Actions e apresentou suas principais ferramentas e possibilidades. Entendi que ele permite criar workflows automatizados, que são executados a partir de determinados eventos dentro do repositório, como um push, pull request ou até mesmo de forma manual.
+Inicialmente, o professor apresentou o funcionamento do GitHub Actions e suas principais ferramentas, mostrando como podemos criar **workflows automatizados** diretamente dentro de um repositório do GitHub.
 
-O ponto que mais chamou minha atenção foi perceber que não precisamos utilizar o GitHub Actions apenas para uma tarefa específica. Podemos criar pipelines completas, com várias etapas acontecendo de maneira organizada e automática.
+A partir disso, entendi que é possível automatizar várias etapas do desenvolvimento, evitando a necessidade de realizar determinados processos manualmente.
 
-⚙️ O que entendi sobre GitHub Actions
+---
 
-O GitHub Actions permite automatizar processos que normalmente precisaríamos executar manualmente.
+## 🚀 GitHub Actions
 
-Um workflow pode ser dividido em diferentes etapas, chamadas de jobs e steps, permitindo que cada parte da pipeline tenha uma responsabilidade específica.
+O GitHub Actions permite criar automações que são executadas a partir de determinados eventos no repositório.
 
-Por exemplo, posso criar uma pipeline que:
+Por exemplo, posso configurar uma pipeline para ser executada automaticamente quando realizo:
 
-Baixa o código do repositório;
-Configura o ambiente necessário;
-Instala as dependências;
-Executa testes;
-Realiza análises no código;
-Gera uma build;
-Faz o deploy da aplicação.
+* 📤 `push` em uma branch;
+* 🔀 abertura de um `pull request`;
+* 🏷️ criação de uma `tag`;
+* ▶️ execução manual do workflow.
 
-Dessa forma, consigo transformar várias tarefas manuais em um processo automatizado.
+Isso permite integrar diferentes ferramentas e processos diretamente ao fluxo de desenvolvimento.
 
-🔄 Pipelines e etapas encadeadas
+---
 
-Uma das coisas mais importantes que entendi durante a aula foi a possibilidade de encadear etapas dentro de uma pipeline.
+## 🔄 Pipelines Automatizadas
 
-Isso significa que uma etapa pode depender do sucesso de outra.
+Um dos principais conceitos apresentados durante a aula foi a utilização de **pipelines**.
 
-Por exemplo:
+Entendi que uma pipeline pode possuir várias etapas e que essas etapas podem ser organizadas e até mesmo **encadeadas**, fazendo com que uma etapa dependa do resultado de outra.
 
-Código enviado
-      ↓
-Instalação das dependências
-      ↓
-Testes automatizados
-      ↓
-Análise do código
-      ↓
-Build
-      ↓
-Deploy
+Um exemplo de fluxo que posso utilizar é:
 
-Se os testes falharem, por exemplo, posso impedir que as etapas seguintes sejam executadas.
-
-Isso é muito importante porque evita que um código com problemas avance para outras etapas do processo.
-
-🧪 GitHub Actions aplicado a testes
-
-Também compreendi como o GitHub Actions pode ser utilizado para trabalhar com testes automatizados.
-
-Posso configurar uma pipeline para que, sempre que realizar um push ou abrir um pull request, os testes sejam executados automaticamente.
-
-Dessa forma, não preciso depender apenas de testes manuais para verificar se uma alteração que fiz quebrou alguma parte do projeto.
-
-Um fluxo possível seria:
-
-Push / Pull Request
-        ↓
+```text
+Alteração no código
+       │
+       ▼
+      Push
+       │
+       ▼
 GitHub Actions
-        ↓
-Instalação das dependências
-        ↓
-Execução dos testes
-        ↓
- ┌───────────────┐
- │ Testes passaram? │
- └───────────────┘
-      ↓       ↓
-     SIM     NÃO
-      ↓       ↓
-    Build    Pipeline para
-      ↓
-    Deploy
+       │
+       ▼
+   Instalação
+       │
+       ▼
+     Testes
+       │
+       ▼
+ Validação do código
+       │
+       ▼
+      Build
+       │
+       ▼
+     Deploy
+```
 
-Essa abordagem ajuda bastante na qualidade do projeto, principalmente quando várias pessoas trabalham no mesmo repositório.
+Dessa forma, consigo criar um processo em que o código só avança para a próxima etapa caso a etapa anterior seja concluída corretamente.
 
-🧩 GitHub Marketplace
+---
 
-Durante a aula, também conheci o GitHub Marketplace, onde podemos encontrar diversas Actions prontas para serem utilizadas nos nossos workflows.
+## 🧪 Automação de Testes
 
-Isso é interessante porque não precisamos desenvolver todas as automações do zero.
+Outro ponto que considerei importante foi a possibilidade de utilizar o GitHub Actions para **testes automatizados**.
 
-Podemos encontrar Actions desenvolvidas para diferentes finalidades, como:
+Posso configurar a pipeline para executar os testes sempre que uma alteração for enviada para o repositório.
 
-Configuração de ambientes;
-Execução de testes;
-Análise de código;
-Docker;
-Deploy;
-Segurança;
-Gerenciamento de dependências;
-Integração com serviços externos.
+Isso é útil porque consigo verificar automaticamente se uma alteração introduziu algum problema no projeto.
 
-Assim, conseguimos montar uma pipeline aproveitando ferramentas que já existem e foram desenvolvidas especificamente para determinadas tarefas.
+Um possível fluxo seria:
 
-🛠️ Atividade Prática
-
-A proposta da atividade foi escolher 3 Actions disponíveis no GitHub Marketplace e desenvolver um projeto que utilizasse essas ferramentas dentro de uma pipeline automatizada.
-
-A ideia foi não apenas adicionar as Actions ao projeto, mas entender em qual etapa cada uma delas deveria ser utilizada.
-
-O fluxo que devo seguir é:
-
-Projeto
-   ↓
-GitHub Actions
-   ↓
-Action 1
-   ↓
-Action 2
-   ↓
-Action 3
-   ↓
-Resultado da Pipeline
-
-Cada Action deve possuir uma função específica dentro do processo.
-
-Por exemplo, posso utilizar uma Action para configurar o ambiente, outra para executar testes e uma terceira para realizar uma análise ou publicação do projeto.
-
-📋 Organização do Workflow
-
-Um dos pontos que considero mais importantes nessa atividade é a organização do workflow.
-
-Não basta fazer a pipeline funcionar. Preciso conseguir entender facilmente o que cada etapa está fazendo.
-
-Por isso, considero importante utilizar nomes claros para os jobs e steps e separar corretamente cada responsabilidade.
-
-Um workflow pode seguir uma estrutura semelhante a:
-
-name: Pipeline
-
-on:
-  push:
-  pull_request:
-
-jobs:
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Baixar código
-        uses: ...
-
-      - name: Configurar ambiente
-        uses: ...
-
-      - name: Executar testes
-        uses: ...
-
-      - name: Gerar build
-        run: ...
-
-A estrutura pode mudar de acordo com o projeto e com as Actions escolhidas, mas a ideia principal é manter o processo organizado e fácil de entender.
-
-🎯 O que aprendi com a aula
-
-Com essa aula, consegui entender que o GitHub Actions pode ser muito mais do que simplesmente executar comandos automaticamente.
-
-Ele pode ser utilizado para criar um processo completo de integração e entrega contínua, conectando diferentes ferramentas e etapas.
-
-Também entendi que podemos criar pipelines mais complexas, inclusive com jobs independentes ou encadeados, dependendo das necessidades do projeto.
-
-A possibilidade de executar testes automaticamente foi um dos pontos que considerei mais importantes, pois permite verificar alterações antes que elas avancem para outras etapas.
-
-💡 Minha visão sobre a aplicação
-
-Vejo bastante utilidade do GitHub Actions em projetos reais.
-
-Em um projeto desenvolvido por várias pessoas, por exemplo, posso configurar o repositório para que cada alteração passe automaticamente por testes e verificações antes de ser integrada.
-
-Isso reduz tarefas repetitivas e ajuda a evitar erros causados por processos manuais.
-
-Também consigo imaginar pipelines maiores, onde cada etapa possui uma responsabilidade:
-
-Desenvolvimento
-      ↓
-Commit
-      ↓
+```text
 Push
-      ↓
-Testes
-      ↓
-Validação
-      ↓
-Build
-      ↓
-Deploy
+ │
+ ▼
+Executar testes
+ │
+ ├── ❌ Falhou → Pipeline interrompida
+ │
+ └── ✅ Passou
+       │
+       ▼
+      Build
+       │
+       ▼
+     Deploy
+```
 
-Dessa maneira, o processo de desenvolvimento fica mais padronizado e previsível.
+Assim, os testes funcionam como uma etapa de validação antes que o código continue pelo restante da pipeline.
 
-📝 Conclusão
+---
 
-Nesta aula, aprendi como o GitHub Actions pode ser utilizado para automatizar diferentes processos dentro de um projeto.
+## 🧩 GitHub Marketplace
 
-Entendi principalmente a importância das pipelines, da organização das etapas e da possibilidade de encadear diferentes processos, principalmente quando trabalhamos com testes automatizados.
+Durante a aula, também conheci o **GitHub Marketplace**, onde existem diversas Actions prontas que podem ser utilizadas nos workflows.
 
-A atividade de utilizar três Actions do GitHub Marketplace também me ajudou a perceber que posso aproveitar ferramentas prontas para construir pipelines mais completas sem precisar desenvolver cada automação do zero.
+Isso facilita bastante a criação das pipelines, pois não preciso desenvolver todas as automações do zero.
 
-Para mim, o principal aprendizado foi entender que DevOps não está apenas relacionado às ferramentas individualmente, mas também à forma como consigo organizar e conectar essas ferramentas em um processo automatizado.
+As Actions disponíveis podem ser utilizadas para diferentes finalidades, como:
 
-GitHub Actions + organização + automação + testes = uma pipeline mais confiável e eficiente.
+* 🧪 Testes automatizados;
+* 🔍 Análise de código;
+* 🔐 Segurança;
+* 📦 Gerenciamento de dependências;
+* 🐳 Docker;
+* 🚀 Deploy;
+* ⚙️ Configuração de ambientes;
+* 📊 Verificações e validações.
+
+---
+
+## 🛠️ Atividade Proposta
+
+A atividade desta aula consiste em escolher **3 Actions disponíveis no GitHub Marketplace** e utilizá-las em um projeto através de uma **pipeline automatizada no GitHub Actions**.
+
+A ideia é utilizar cada Action em uma etapa adequada do processo, fazendo com que elas trabalhem em conjunto dentro do workflow.
+
+O fluxo da atividade pode ser representado da seguinte maneira:
+
+```text
+                 Projeto
+                    │
+                    ▼
+             GitHub Actions
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+       Action 1            Action 2
+          │                   │
+          └─────────┬─────────┘
+                    ▼
+                 Action 3
+                    │
+                    ▼
+              Resultado
+```
+
+---
+
+## 🔧 Actions Utilizadas
+
+Para realizar a atividade, utilizei três Actions do **GitHub Marketplace**, cada uma responsável por uma etapa diferente da pipeline.
+
+| Action      | Função                              | Etapa       |
+| ----------- | ----------------------------------- | ----------- |
+| 🔧 Action 1 | Configuração/preparação do ambiente | Preparação  |
+| 🧪 Action 2 | Execução das verificações/testes    | Testes      |
+| 🚀 Action 3 | Processo final da aplicação         | Finalização |
+
+A utilização de Actions diferentes em cada etapa permitiu compreender melhor como podemos **combinar ferramentas dentro de uma mesma pipeline**.
+
+---
+
+## 📋 Organização do Workflow
+
+O workflow foi configurado dentro do próprio repositório utilizando um arquivo localizado em:
+
+```text
+.github/
+└── workflows/
+    └── pipeline.yml
+```
+
+Essa organização permite manter os workflows separados do restante do código da aplicação.
+
+A estrutura básica utilizada segue a ideia:
+
+```text
+.github
+   │
+   └── workflows
+          │
+          └── pipeline.yml
+                    │
+                    ├── Action 1
+                    ├── Action 2
+                    └── Action 3
+```
+
+Manter essa estrutura organizada é importante porque, conforme o projeto cresce, posso ter diferentes workflows para diferentes finalidades.
+
+---
+
+## ▶️ Execução da Pipeline
+
+Depois de configurar o workflow, realizei a execução da pipeline pelo **GitHub Actions**.
+
+Durante a execução, foi possível acompanhar cada etapa separadamente e verificar se as Actions foram executadas corretamente.
+
+O processo ficou organizado da seguinte maneira:
+
+```text
+Workflow iniciado
+       │
+       ▼
+Action 1
+       │
+       ▼
+Action 2
+       │
+       ▼
+Action 3
+       │
+       ▼
+Pipeline concluída
+```
+
+A execução das etapas permitiu verificar na prática como o GitHub Actions consegue automatizar processos que anteriormente precisariam ser executados manualmente.
+
+---
+
+## 💡 O que eu aprendi
+
+Com esta aula, entendi melhor como o **GitHub Actions** pode ser utilizado dentro de um fluxo real de desenvolvimento.
+
+O principal aprendizado foi perceber que posso criar pipelines com diversas etapas e utilizar diferentes ferramentas dentro delas.
+
+Também entendi que as pipelines podem ser **encadeadas**, principalmente quando existe uma dependência entre processos, como executar os testes antes de permitir que uma aplicação avance para uma etapa de build ou deploy.
+
+Além disso, o GitHub Marketplace facilita bastante esse processo porque disponibiliza Actions prontas para diversas necessidades.
+
+---
+
+## 📈 Aplicação em Projetos Reais
+
+Consigo aplicar esse conhecimento em projetos futuros para automatizar boa parte do meu fluxo de desenvolvimento.
+
+Um projeto maior poderia possuir uma pipeline como:
+
+```text
+       Desenvolver
+            │
+            ▼
+          Commit
+            │
+            ▼
+           Push
+            │
+            ▼
+    ┌─────────────────┐
+    │ GitHub Actions   │
+    └────────┬────────┘
+             │
+             ▼
+        Testes
+             │
+             ▼
+       Análise/Validação
+             │
+             ▼
+           Build
+             │
+             ▼
+          Deploy
+```
+
+Dessa forma, consigo reduzir processos manuais e tornar o desenvolvimento mais organizado, automatizado e confiável.
+
+---
+
+## 📝 Considerações Finais
+
+Nesta aula, aprendi que o **GitHub Actions** pode ser utilizado para muito mais do que executar um simples comando automaticamente.
+
+Posso utilizar diferentes Actions para criar um fluxo completo de desenvolvimento, conectando **testes, validações, builds e deploys** dentro de uma única pipeline.
+
+A possibilidade de encadear essas etapas também mostra como o conceito de automação pode crescer junto com o projeto.
+
+> ⚙️ **Código → GitHub → Actions → Testes → Validação → Build → Deploy**
+
+Para mim, o principal aprendizado desta aula foi entender como transformar tarefas que seriam realizadas manualmente em um **processo automatizado e organizado dentro do próprio GitHub**.
