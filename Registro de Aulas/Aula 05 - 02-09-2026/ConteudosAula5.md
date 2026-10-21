@@ -280,7 +280,8 @@ Para mim, o principal aprendizado desta aula foi entender como transformar taref
 
 ---
 
-[← Anterior](../Aula%2004%20-%2026-08-2026/PesquisaGitHubActions-AzureDevOps.md) | [Próximo →](../Aula%2007%20-%2016-09-2026/ConteudoAula07.md)
+[← Anterior](../Aula%2004%20-%2026-08-2026/PesquisaGitHubActions-AzureDevOps.md) | [Próximo: Aula 6 →](../Aula%2006%20-%2009-09-2026/Aula06-ProjetoPipeline.md)
+
 
 
 

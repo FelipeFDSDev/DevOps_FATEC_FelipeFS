@@ -11,7 +11,8 @@ Siga os materiais em ordem. No fim de cada página, use **Próximo** para contin
 3. **Aula 3 — 19/08/2026:** [Documentação](Aula%2003%20-%2019-08-2026/Documenta%C3%A7%C3%A3o.md) → [Hospedagem](Aula%2003%20-%2019-08-2026/Hospedagem.md) → [Modificações](Aula%2003%20-%2019-08-2026/Modifica%C3%A7%C3%B5es.md) → [Atividade: Landing Page](Aula%2003%20-%2019-08-2026/Atividade_sobre_Landing_Pages/README.md)
 4. **Aula 4 — 26/08/2026:** [Pesquisa: GitHub Actions e Azure DevOps](Aula%2004%20-%2026-08-2026/PesquisaGitHubActions-AzureDevOps.md)
 5. **Aula 5 — 02/09/2026:** [GitHub Actions e pipelines](Aula%2005%20-%2002-09-2026/ConteudosAula5.md)
-6. **Aula 7 — 16/09/2026:** [Testes automatizados e qualidade](Aula%2007%20-%2016-09-2026/ConteudoAula07.md)
+6. **Aula 6 — 09/09/2026:** [Pipeline do projeto e análise de três repositórios](Aula%2006%20-%2009-09-2026/Aula06-ProjetoPipeline.md) · [relatório completo da análise](https://github.com/FelipeFDSDev/frases-filosofia/blob/main/analise%20de%203%20projetos%20com%20pipelines/analise-pipelines-github.md)
+7. **Aula 7 — 16/09/2026:** [Testes automatizados e qualidade](Aula%2007%20-%2016-09-2026/ConteudoAula07.md)
 
 ## Outros materiais
 
