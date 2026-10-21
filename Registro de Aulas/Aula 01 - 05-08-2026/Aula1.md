@@ -1,4 +1,4 @@
-# 📖 Resumo — Aula 01
+﻿# 📖 Resumo — Aula 01
 
 > 📅 **Data:** 05/08/2026
 > 🎓 **Disciplina:** DevOps
@@ -46,3 +46,11 @@ Isso torna a disciplina interessante não apenas pelo aprendizado técnico, mas 
 Foi uma primeira aula bastante interessante e descontraída. Mesmo sendo uma introdução, ela já proporcionou uma visão inicial sobre o que podemos esperar da disciplina e levantou alguns conceitos importantes que serão desenvolvidos nas próximas aulas.
 
 > **"O objetivo não é apenas aprender DevOps, mas também aprender a trabalhar e evoluir como desenvolvedor."** 🚀
+
+
+---
+
+[Próximo →](../Aula%2002%20-%2012-08-2026/Aula2.md)
+
+
+

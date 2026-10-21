@@ -1,4 +1,4 @@
-GitHub Actions e Azure DevOps: análise comparativa de plataformas CI/CD
+﻿GitHub Actions e Azure DevOps: análise comparativa de plataformas CI/CD
 
     Pesquisa acadêmica sobre integração e entrega contínuas (CI/CD), automação DevOps, segurança, escalabilidade, governança e custos
 
@@ -2933,3 +2933,10 @@ Referência temporal da pesquisa
 Data de atualização: 26 de agosto de 2026.
 
 Observação: preços, limites de execução, versões de actions/tasks, recursos experimentais e políticas comerciais podem mudar. Para reprodução acadêmica, recomenda-se registrar a data da consulta e, quando necessário, arquivar as páginas oficiais utilizadas.
+
+---
+
+[← Anterior](../Aula%2003%20-%2019-08-2026/Atividade_sobre_Landing_Pages/README.md) | [Próximo →](../Aula%2005%20-%2002-09-2026/ConteudosAula5.md)
+
+
+

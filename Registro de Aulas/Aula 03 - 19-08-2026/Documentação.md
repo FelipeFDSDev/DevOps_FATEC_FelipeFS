@@ -1,4 +1,4 @@
-# 🚀 Documentação do Projeto: Landing Page Next.js
+﻿# 🚀 Documentação do Projeto: Landing Page Next.js
 
 > **Disciplina:** DevOps — FATEC  
 > **Atividade:** Aula 03 — Clonando e Customizando Landing Pages  
@@ -263,3 +263,11 @@ A aplicação está hospedada e configurada com deploy contínuo através da pla
 
 - Projeto desenvolvido para fins educacionais na disciplina de **DevOps** da **FATEC**.
 - Licença sob os termos da licença ISC.
+
+
+---
+
+[← Anterior](../Aula%2002%20-%2012-08-2026/Aula2.md) | [Próximo →](Hospedagem.md)
+
+
+

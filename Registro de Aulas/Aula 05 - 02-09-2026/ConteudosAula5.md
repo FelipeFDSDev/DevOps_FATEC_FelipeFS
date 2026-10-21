@@ -1,4 +1,4 @@
-# ⚙️ GitHub Actions e Pipelines Automatizadas
+﻿# ⚙️ GitHub Actions e Pipelines Automatizadas
 
 > **Disciplina:** DevOps — FATEC
 > **Atividade:** GitHub Actions e Automação de Pipelines
@@ -276,3 +276,11 @@ A possibilidade de encadear essas etapas também mostra como o conceito de autom
 > ⚙️ **Código → GitHub → Actions → Testes → Validação → Build → Deploy**
 
 Para mim, o principal aprendizado desta aula foi entender como transformar tarefas que seriam realizadas manualmente em um **processo automatizado e organizado dentro do próprio GitHub**.
+
+
+---
+
+[← Anterior](../Aula%2004%20-%2026-08-2026/PesquisaGitHubActions-AzureDevOps.md) | [Próximo →](../Aula%2007%20-%2016-09-2026/ConteudoAula07.md)
+
+
+

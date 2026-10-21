@@ -1,4 +1,4 @@
-# 📝 Anotações — Aula 01
+﻿# 📝 Anotações — Aula 01
 
 ## 📂 Organização dos Repositórios
 
@@ -81,3 +81,11 @@ Aplicação publicada
 ```
 
 A atividade tem como objetivo colocar em prática conceitos básicos de **versionamento, integração e deploy**, aproximando o processo de desenvolvimento da realidade de um ambiente DevOps.
+
+
+---
+
+[← Anterior](../Aula%2001%20-%2005-08-2026/Aula1.md) | [Próximo →](../Aula%2003%20-%2019-08-2026/Documenta%C3%A7%C3%A3o.md)
+
+
+

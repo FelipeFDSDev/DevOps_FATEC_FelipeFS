@@ -1,4 +1,4 @@
-# 🔧 Modificações do Projeto
+﻿# 🔧 Modificações do Projeto
 
 > **Disciplina:** DevOps — FATEC
 > **Atividade:** Aula 03 — Clonando e Customizando Landing Pages
@@ -96,3 +96,11 @@ Embora não tenham sido realizadas modificações visuais ou funcionais no templ
 O principal objetivo desta etapa foi compreender o processo de levar um projeto existente desde sua disponibilização local até sua publicação em um ambiente de produção utilizando **GitHub + Vercel**.
 
 > 🚀 **Projeto original → GitHub → Vercel → Aplicação em produção**
+
+
+---
+
+[← Anterior](Hospedagem.md) | [Próximo →](Atividade_sobre_Landing_Pages/README.md)
+
+
+
