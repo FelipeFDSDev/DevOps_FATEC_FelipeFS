@@ -1,4 +1,4 @@
-﻿# 📝 Anotações — Aula 01
+﻿# 📝 Registro — Aula 02
 
 ## 📂 Organização dos Repositórios
 
@@ -86,6 +86,7 @@ A atividade tem como objetivo colocar em prática conceitos básicos de **versio
 ---
 
 [← Anterior](../Aula%2001%20-%2005-08-2026/Aula1.md) | [Próximo →](../Aula%2003%20-%2019-08-2026/Documenta%C3%A7%C3%A3o.md)
+
 
 
 
