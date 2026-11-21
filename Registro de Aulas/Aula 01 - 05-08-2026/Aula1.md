@@ -1,56 +1,40 @@
-﻿# 📖 Resumo — Aula 01
+﻿# Aula 01 — Introdução à disciplina
 
-> 📅 **Data:** 05/08/2026
-> 🎓 **Disciplina:** DevOps
+> **Data:** 05/08/2026<br>
+> **Tema:** apresentação da disciplina, organização das atividades e introdução a DevOps<br>
+> **Repositório do grupo:** [DevOps_GrupoGeek](https://github.com/LuisGlauser/DevOps_GrupoGeek)<br>
+> **Repositório individual:** [DevOps_FATEC_FelipeFS](https://github.com/FelipeFDSDev/DevOps_FATEC_FelipeFS)
 
-## 🚀 Introdução
+## Sobre a aula
 
-A primeira aula começou com uma breve apresentação de todos os alunos. Durante esse momento, o professor buscou conhecer um pouco melhor cada pessoa da turma, registrando algumas de suas **características, experiências e perspectivas**.
+A aula apresentou a disciplina e os temas previstos para o semestre. Também houve uma apresentação dos estudantes, com o objetivo de conhecer suas experiências, características e expectativas. Entre os assuntos iniciais apareceram colaboração, versionamento, boas práticas e a importância de evitar soluções improvisadas que dificultem a manutenção do software.
 
-Após as apresentações, tivemos uma introdução sobre a disciplina de **DevOps**, incluindo uma visão geral dos conteúdos que serão abordados ao longo do semestre e como serão realizadas as atividades.
+## Atividades propostas
 
-## 📝 Atividades
+A organização definida para as atividades semanais foi:
 
-Foi explicado que grande parte das atividades será realizada **em grupo**, incentivando a colaboração e o trabalho em equipe.
+1. Formar grupos de **3 a 5 integrantes**.
+2. Manter a mesma composição do grupo durante as atividades semanais.
+3. Reunir-se semanalmente para realizar as propostas feitas em aula.
+4. Manter um repositório coletivo para o trabalho do grupo e um repositório individual para registrar as atividades da disciplina.
 
-Também foi informado que **não teremos provas**.
+## Organização adotada
 
-> ⚠️ **Contém mentiras.** 🤡
+- **Repositório coletivo:** [LuisGlauser/DevOps_GrupoGeek](https://github.com/LuisGlauser/DevOps_GrupoGeek).
+- **Repositório individual deste registro:** [FelipeFDSDev/DevOps_FATEC_FelipeFS](https://github.com/FelipeFDSDev/DevOps_FATEC_FelipeFS).
 
-## 💡 O que aprendemos
+Essa separação permite manter o trabalho colaborativo do grupo e, ao mesmo tempo, organizar individualmente os registros, materiais e atividades desenvolvidos ao longo da disciplina.
 
-Apesar de ser uma aula introdutória e os assuntos terem sido apresentados de maneira mais superficial, já foi possível ter uma boa noção do que iremos estudar durante a disciplina.
+## Conceitos e reflexão
 
-Entre os conceitos apresentados, destacaram-se:
+O ciclo de desenvolvimento e operação foi apresentado como um processo contínuo: planejar, programar, construir, testar, publicar, implantar, operar e monitorar. O retorno do monitoramento ao planejamento ajuda a orientar melhorias e novas entregas.
 
-* 🔄 **Versionamento de código**
-* 🤝 **Trabalho em equipe**
-* 🛠️ **Boas práticas de desenvolvimento**
-* 🐴 **Evitar o famoso "Go Horse"**
-* 🧠 **Autoconhecimento e evolução profissional**
+A aula também propôs acompanhar a evolução profissional de cada estudante ao longo do semestre, relacionando as percepções iniciais às experiências e aprendizados posteriores.
 
-Um dos pontos mais interessantes foi a abordagem sobre **versionamento de código** e a importância de desenvolver soluções de maneira organizada, evitando o famoso *"funciona na minha máquina"*.
+## Registro da atividade
 
-## 🧠 Uma proposta diferente
-
-Além dos conceitos técnicos, o professor também comentou sobre utilizar, ao longo das aulas, as características que identificamos durante nossa apresentação inicial.
-
-A ideia é acompanhar nossa evolução durante a disciplina e observar como nossas **percepções, conhecimentos e concepções sobre nós mesmos** podem mudar com o passar do tempo.
-
-Isso torna a disciplina interessante não apenas pelo aprendizado técnico, mas também pela possibilidade de acompanhar nossa própria **evolução como profissionais**.
+A estrutura de trabalho descrita acima está representada pelos repositórios coletivo e individual indicados no início desta página. As próximas atividades devem ser registradas neste repositório individual e, quando realizadas em grupo, vinculadas também ao repositório coletivo correspondente.
 
 ---
 
-### 🎯 Considerações finais
-
-Foi uma primeira aula bastante interessante e descontraída. Mesmo sendo uma introdução, ela já proporcionou uma visão inicial sobre o que podemos esperar da disciplina e levantou alguns conceitos importantes que serão desenvolvidos nas próximas aulas.
-
-> **"O objetivo não é apenas aprender DevOps, mas também aprender a trabalhar e evoluir como desenvolvedor."** 🚀
-
-
----
-
-[Próximo →](../Aula%2002%20-%2012-08-2026/Aula2.md)
-
-
-
+[Próxima aula →](../Aula%2002%20-%2012-08-2026/Aula2.md) · [Índice das aulas](../README.md) · [Início](../../README.md)

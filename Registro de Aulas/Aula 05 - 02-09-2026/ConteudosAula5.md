@@ -1,287 +1,61 @@
-﻿# ⚙️ GitHub Actions e Pipelines Automatizadas
+﻿# Aula 05 — GitHub Actions e Marketplace
 
-> **Disciplina:** DevOps — FATEC
-> **Atividade:** GitHub Actions e Automação de Pipelines
----
+> **Data:** 02/09/2026<br>
+> **Tema:** composição de uma pipeline com Actions reutilizáveis<br>
+> **Projeto utilizado:** [fichas-de-treino](https://github.com/FelipeFDSDev/fichas-de-treino)
 
-## 📌 Sobre a Aula
+## Conteúdo da aula
 
-Durante esta aula, aprendi sobre o **GitHub Actions** e como ele pode ser utilizado para automatizar diferentes processos dentro de um projeto.
+O GitHub Actions automatiza tarefas acionadas por eventos do repositório, como `push`, abertura de pull request, criação de tag ou execução manual. Um workflow YAML reúne jobs e etapas; cada job é executado em um runner e pode usar comandos ou Actions reutilizáveis.
 
-Inicialmente, o professor apresentou o funcionamento do GitHub Actions e suas principais ferramentas, mostrando como podemos criar **workflows automatizados** diretamente dentro de um repositório do GitHub.
+O GitHub Marketplace oferece Actions para tarefas como preparar ambientes, executar verificações, analisar código, publicar artefatos e realizar deploy. A escolha deve corresponder ao objetivo de cada etapa, mantendo a pipeline compreensível e útil para o projeto.
 
-A partir disso, entendi que é possível automatizar várias etapas do desenvolvimento, evitando a necessidade de realizar determinados processos manualmente.
+## Atividade proposta
 
----
+1. Escolher **três Actions** disponíveis no GitHub Marketplace.
+2. Integrá-las a um projeto em etapas adequadas de uma pipeline automatizada.
+3. Configurar o workflow no GitHub Actions e executá-lo.
+4. Verificar o resultado de cada etapa e documentar o nome, a função e a contribuição de cada Action.
 
-## 🚀 GitHub Actions
+## Projeto e workflow
 
-O GitHub Actions permite criar automações que são executadas a partir de determinados eventos no repositório.
+A atividade foi desenvolvida no repositório [FelipeFDSDev/fichas-de-treino](https://github.com/FelipeFDSDev/fichas-de-treino). O workflow [`ci.yml`](https://github.com/FelipeFDSDev/fichas-de-treino/blob/main/.github/workflows/ci.yml) configura o job `quality` em `ubuntu-latest`, com permissão `contents: read`. Ele é disparado em `push` e pull request para `main` ou `develop`, e também pode ser iniciado manualmente.
 
-Por exemplo, posso configurar uma pipeline para ser executada automaticamente quando realizo:
+### Actions do Marketplace utilizadas
 
-* 📤 `push` em uma branch;
-* 🔀 abertura de um `pull request`;
-* 🏷️ criação de uma `tag`;
-* ▶️ execução manual do workflow.
+| Action | Função na pipeline | Etapa |
+|---|---|---|
+| [`actions/checkout@v4`](https://github.com/marketplace/actions/checkout) | Baixa o conteúdo do repositório no runner para que os próximos comandos possam usar o código. | Checkout |
+| [`actions/setup-node@v4`](https://github.com/marketplace/actions/setup-node-js-environment) | Configura o Node.js 20 e o cache do npm. | Preparação do ambiente |
+| [`actions/upload-artifact@v4`](https://github.com/marketplace/actions/upload-a-build-artifact) | Publica os diretórios `src/` e `dist/` como artefato `treino-fichas-build` ao final do workflow. | Armazenamento do resultado |
 
-Isso permite integrar diferentes ferramentas e processos diretamente ao fluxo de desenvolvimento.
+Entre essas Actions, o workflow também executa comandos do projeto: `npm ci`, `npm run lint`, `npm run format:check`, `npm test -- --runInBand` e `npm run build`. Esses comandos verificam dependências, qualidade, formatação e testes, e geram o build; eles não são Actions do Marketplace.
 
----
-
-## 🔄 Pipelines Automatizadas
-
-Um dos principais conceitos apresentados durante a aula foi a utilização de **pipelines**.
-
-Entendi que uma pipeline pode possuir várias etapas e que essas etapas podem ser organizadas e até mesmo **encadeadas**, fazendo com que uma etapa dependa do resultado de outra.
-
-Um exemplo de fluxo que posso utilizar é:
+## Fluxo automatizado
 
 ```text
-Alteração no código
-       │
-       ▼
-      Push
-       │
-       ▼
-GitHub Actions
-       │
-       ▼
-   Instalação
-       │
-       ▼
-     Testes
-       │
-       ▼
- Validação do código
-       │
-       ▼
-      Build
-       │
-       ▼
-     Deploy
+Push / pull request em main ou develop (ou execução manual)
+                             ↓
+                     Runner Ubuntu
+                             ↓
+                   Checkout do código
+                             ↓
+              Configuração do Node.js 20
+                             ↓
+             npm ci → lint → format:check
+                             ↓
+                testes → build → artefato
 ```
 
-Dessa forma, consigo criar um processo em que o código só avança para a próxima etapa caso a etapa anterior seja concluída corretamente.
+## Registro da realização
+
+O workflow combina as três Actions acima com verificações executadas por comandos npm. O histórico público registra execuções `push` concluídas com sucesso em **19/09/2026**, posteriores à aula: [execução 1](https://github.com/FelipeFDSDev/fichas-de-treino/actions/runs/35477469135) e [execução 2](https://github.com/FelipeFDSDev/fichas-de-treino/actions/runs/35476946801). Esses registros confirmam que o workflow foi executado com sucesso naquela data; a aba **Actions** apresenta os detalhes de cada etapa.
+
+## Aprendizados
+
+A atividade demonstra que uma pipeline pode combinar ações prontas do Marketplace e comandos específicos da aplicação. Cada etapa deve ter uma responsabilidade clara: preparar o código, configurar o ambiente, validar o projeto e guardar o artefato produzido.
 
 ---
 
-## 🧪 Automação de Testes
-
-Outro ponto que considerei importante foi a possibilidade de utilizar o GitHub Actions para **testes automatizados**.
-
-Posso configurar a pipeline para executar os testes sempre que uma alteração for enviada para o repositório.
-
-Isso é útil porque consigo verificar automaticamente se uma alteração introduziu algum problema no projeto.
-
-Um possível fluxo seria:
-
-```text
-Push
- │
- ▼
-Executar testes
- │
- ├── ❌ Falhou → Pipeline interrompida
- │
- └── ✅ Passou
-       │
-       ▼
-      Build
-       │
-       ▼
-     Deploy
-```
-
-Assim, os testes funcionam como uma etapa de validação antes que o código continue pelo restante da pipeline.
-
----
-
-## 🧩 GitHub Marketplace
-
-Durante a aula, também conheci o **GitHub Marketplace**, onde existem diversas Actions prontas que podem ser utilizadas nos workflows.
-
-Isso facilita bastante a criação das pipelines, pois não preciso desenvolver todas as automações do zero.
-
-As Actions disponíveis podem ser utilizadas para diferentes finalidades, como:
-
-* 🧪 Testes automatizados;
-* 🔍 Análise de código;
-* 🔐 Segurança;
-* 📦 Gerenciamento de dependências;
-* 🐳 Docker;
-* 🚀 Deploy;
-* ⚙️ Configuração de ambientes;
-* 📊 Verificações e validações.
-
----
-
-## 🛠️ Atividade Proposta
-
-A atividade desta aula consiste em escolher **3 Actions disponíveis no GitHub Marketplace** e utilizá-las em um projeto através de uma **pipeline automatizada no GitHub Actions**.
-
-A ideia é utilizar cada Action em uma etapa adequada do processo, fazendo com que elas trabalhem em conjunto dentro do workflow.
-
-O fluxo da atividade pode ser representado da seguinte maneira:
-
-```text
-                 Projeto
-                    │
-                    ▼
-             GitHub Actions
-                    │
-          ┌─────────┴─────────┐
-          ▼                   ▼
-       Action 1            Action 2
-          │                   │
-          └─────────┬─────────┘
-                    ▼
-                 Action 3
-                    │
-                    ▼
-              Resultado
-```
-
----
-
-## 🔧 Actions Utilizadas
-
-Para realizar a atividade, utilizei três Actions do **GitHub Marketplace**, cada uma responsável por uma etapa diferente da pipeline.
-
-| Action      | Função                              | Etapa       |
-| ----------- | ----------------------------------- | ----------- |
-| 🔧 Action 1 | Configuração/preparação do ambiente | Preparação  |
-| 🧪 Action 2 | Execução das verificações/testes    | Testes      |
-| 🚀 Action 3 | Processo final da aplicação         | Finalização |
-
-A utilização de Actions diferentes em cada etapa permitiu compreender melhor como podemos **combinar ferramentas dentro de uma mesma pipeline**.
-
----
-
-## 📋 Organização do Workflow
-
-O workflow foi configurado dentro do próprio repositório utilizando um arquivo localizado em:
-
-```text
-.github/
-└── workflows/
-    └── pipeline.yml
-```
-
-Essa organização permite manter os workflows separados do restante do código da aplicação.
-
-A estrutura básica utilizada segue a ideia:
-
-```text
-.github
-   │
-   └── workflows
-          │
-          └── pipeline.yml
-                    │
-                    ├── Action 1
-                    ├── Action 2
-                    └── Action 3
-```
-
-Manter essa estrutura organizada é importante porque, conforme o projeto cresce, posso ter diferentes workflows para diferentes finalidades.
-
----
-
-## ▶️ Execução da Pipeline
-
-Depois de configurar o workflow, realizei a execução da pipeline pelo **GitHub Actions**.
-
-Durante a execução, foi possível acompanhar cada etapa separadamente e verificar se as Actions foram executadas corretamente.
-
-O processo ficou organizado da seguinte maneira:
-
-```text
-Workflow iniciado
-       │
-       ▼
-Action 1
-       │
-       ▼
-Action 2
-       │
-       ▼
-Action 3
-       │
-       ▼
-Pipeline concluída
-```
-
-A execução das etapas permitiu verificar na prática como o GitHub Actions consegue automatizar processos que anteriormente precisariam ser executados manualmente.
-
----
-
-## 💡 O que eu aprendi
-
-Com esta aula, entendi melhor como o **GitHub Actions** pode ser utilizado dentro de um fluxo real de desenvolvimento.
-
-O principal aprendizado foi perceber que posso criar pipelines com diversas etapas e utilizar diferentes ferramentas dentro delas.
-
-Também entendi que as pipelines podem ser **encadeadas**, principalmente quando existe uma dependência entre processos, como executar os testes antes de permitir que uma aplicação avance para uma etapa de build ou deploy.
-
-Além disso, o GitHub Marketplace facilita bastante esse processo porque disponibiliza Actions prontas para diversas necessidades.
-
----
-
-## 📈 Aplicação em Projetos Reais
-
-Consigo aplicar esse conhecimento em projetos futuros para automatizar boa parte do meu fluxo de desenvolvimento.
-
-Um projeto maior poderia possuir uma pipeline como:
-
-```text
-       Desenvolver
-            │
-            ▼
-          Commit
-            │
-            ▼
-           Push
-            │
-            ▼
-    ┌─────────────────┐
-    │ GitHub Actions   │
-    └────────┬────────┘
-             │
-             ▼
-        Testes
-             │
-             ▼
-       Análise/Validação
-             │
-             ▼
-           Build
-             │
-             ▼
-          Deploy
-```
-
-Dessa forma, consigo reduzir processos manuais e tornar o desenvolvimento mais organizado, automatizado e confiável.
-
----
-
-## 📝 Considerações Finais
-
-Nesta aula, aprendi que o **GitHub Actions** pode ser utilizado para muito mais do que executar um simples comando automaticamente.
-
-Posso utilizar diferentes Actions para criar um fluxo completo de desenvolvimento, conectando **testes, validações, builds e deploys** dentro de uma única pipeline.
-
-A possibilidade de encadear essas etapas também mostra como o conceito de automação pode crescer junto com o projeto.
-
-> ⚙️ **Código → GitHub → Actions → Testes → Validação → Build → Deploy**
-
-Para mim, o principal aprendizado desta aula foi entender como transformar tarefas que seriam realizadas manualmente em um **processo automatizado e organizado dentro do próprio GitHub**.
-
-
----
-
-[← Anterior](../Aula%2004%20-%2026-08-2026/PesquisaGitHubActions-AzureDevOps.md) | [Próximo: Aula 6 →](../Aula%2006%20-%2009-09-2026/Aula06-ProjetoPipeline.md)
-
-
-
+[← Aula 04](../Aula%2004%20-%2026-08-2026/PesquisaGitHubActions-AzureDevOps.md) · [Índice das aulas](../README.md) · [Próxima aula →](../Aula%2006%20-%2009-09-2026/Aula06-ProjetoPipeline.md)
 

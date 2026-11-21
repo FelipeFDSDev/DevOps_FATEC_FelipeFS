@@ -1,92 +1,35 @@
-﻿# 📝 Registro — Aula 02
+﻿# Aula 02 — Versionamento e publicação de um projeto
 
-## 📂 Organização dos Repositórios
+> **Data:** 12/08/2026<br>
+> **Tema:** Visual Studio Code, Git, GitHub, commits e tags<br>
+> **Projeto utilizado:** [RoladorDeStatusRPG](https://github.com/LuisGlauser/RoladorDeStatusRPG)
 
-Durante a aula, foi definida uma estrutura para organização dos trabalhos da disciplina.
+## Atividade proposta
 
-A ideia é manter:
+A atividade foi desenvolver e versionar um projeto web simples em grupo, usando o Visual Studio Code e o GitHub:
 
-* 📚 **1 repositório principal** para a matéria de DevOps;
-* 👥 **1 repositório para o grupo**;
-* 📁 **1 repositório para cada atividade** realizada.
+1. Instalar o Visual Studio Code.
+2. Criar, na mesma pasta, os arquivos `index.html`, `style.css` e `script.js`, utilizando os códigos fornecidos em aula.
+3. Configurar o Git no VS Code, inicializar o repositório e publicar o projeto no GitHub.
+4. Alterar o projeto, registrar as mudanças em commits e marcar uma versão com uma tag.
+5. Documentar o processo e enviar a documentação pela plataforma Teams.
 
-Essa organização facilita o versionamento, a colaboração e o acompanhamento das atividades ao longo da disciplina.
+## Repositório da atividade
 
----
+O projeto utilizado como entrega é [LuisGlauser/RoladorDeStatusRPG](https://github.com/LuisGlauser/RoladorDeStatusRPG). O link permite consultar o código e o histórico versionado da atividade.
 
-## ⚙️ O Problema de Entregar Software
+## O que a atividade praticou
 
-Um dos conceitos apresentados foi o processo tradicional de desenvolvimento e entrega de software.
+- Organização dos arquivos de uma página web.
+- Integração entre o editor, Git local e repositório remoto.
+- Registro incremental de mudanças com commits.
+- Identificação de uma versão do projeto com tags.
+- Documentação de um fluxo de trabalho reproduzível.
 
-O fluxo apresentado foi:
+## Registro de realização
 
-```text
-Plan
-  ↓
-Code
-  ↓
-Build
-  ↓
-Test
-  ↓
-Release
-  ↓
-Deploy
-  ↓
-Operate
-  ↓
-Monitor
-  ↓
-Plan
-  ↺
-```
-
-### 🔄 Ciclo de desenvolvimento
-
-O processo representa um **ciclo contínuo**, no qual o software passa por diferentes etapas desde o planejamento até sua operação e monitoramento.
-
-Após o monitoramento, novas informações são obtidas e utilizadas para retornar ao **planejamento**, iniciando um novo ciclo.
-
-Esse conceito está diretamente relacionado à ideia de **integração, automação e melhoria contínua**, pilares importantes dentro de DevOps.
+O repositório acima é o projeto associado à atividade. A proposta previa documentar o processo e enviar o arquivo no Teams; este caderno registra o objetivo, as etapas solicitadas e o link do artefato. O envio na plataforma não é verificável por este repositório.
 
 ---
 
-## 🤖 Stitch AI
-
-Foi apresentado o **Stitch AI**, uma ferramenta relacionada ao desenvolvimento de interfaces e aplicações utilizando inteligência artificial.
-
-> 💡 A ferramenta pode ser utilizada como apoio durante o processo de criação de projetos e protótipos.
-
----
-
-# 🚀 Atividade
-
-### 🎯 Proposta
-
-Desenvolver um **projeto simples** utilizando:
-
-* 🐙 **GitHub** — para versionamento e hospedagem do código;
-* ▲ **Vercel** — para publicação e hospedagem da aplicação.
-
-### 🔗 Fluxo esperado
-
-```text
-Desenvolvimento
-      ↓
-   GitHub
-      ↓
-   Vercel
-      ↓
-Aplicação publicada
-```
-
-A atividade tem como objetivo colocar em prática conceitos básicos de **versionamento, integração e deploy**, aproximando o processo de desenvolvimento da realidade de um ambiente DevOps.
-
-
----
-
-[← Anterior](../Aula%2001%20-%2005-08-2026/Aula1.md) | [Próximo →](../Aula%2003%20-%2019-08-2026/Documenta%C3%A7%C3%A3o.md)
-
-
-
-
+[← Aula 01](../Aula%2001%20-%2005-08-2026/Aula1.md) · [Índice das aulas](../README.md) · [Próximo material: Aula 03 →](../Aula%2003%20-%2019-08-2026/Documenta%C3%A7%C3%A3o.md)
