@@ -16,6 +16,7 @@ Os registros estão organizados em ordem cronológica. Cada página identifica o
 | 06 | 09/09/2026 | [CI de frases-filosofia e análise de três repositórios](Aula%2006%20-%2009-09-2026/Aula06-ProjetoPipeline.md) · [relatório completo](https://github.com/FelipeFDSDev/frases-filosofia/blob/main/analise%20de%203%20projetos%20com%20pipelines/analise-pipelines-github.md) |
 | 07 | 16/09/2026 | [Testes unitários, integração, performance e CI — tipos-de-testes](Aula%2007%20-%2016-09-2026/ConteudoAula07.md) |
 | 09 | 23/09/2026 | [Documentação de software — atividade com o MiltonProject](Aula%2009%20-%2023-09-2026/DocumentacaoSoftware.md) |
+| 10 | 21/10/2026 | [Projeto final DevOps — RateMedia](Aula%2010%20-%2021-10-2026/ProjetoFinal.md) |
 
 A Aula 03 reúne diferentes arquivos para documentar as etapas da atividade prática. Os demais registros descrevem a proposta e os resultados conhecidos de cada atividade, sem presumir entregas que não estejam documentadas.
 

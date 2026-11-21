@@ -25,6 +25,7 @@ Cada registro de aula apresenta o tema estudado e organiza as **atividades propo
 | 06 | **09/09/2026 · Integração contínua** | [CI de frases-filosofia e análise de três repositórios](Registro%20de%20Aulas/Aula%2006%20-%2009-09-2026/Aula06-ProjetoPipeline.md) |
 | 07 | **16/09/2026 · Qualidade** | [Três tipos de testes e pipeline CI — tipos-de-testes](Registro%20de%20Aulas/Aula%2007%20-%2016-09-2026/ConteudoAula07.md) |
 | 09 | **23/09/2026 · Documentação de software** | [Atividade documentada com o MiltonProject](Registro%20de%20Aulas/Aula%2009%20-%2023-09-2026/DocumentacaoSoftware.md) |
+| 10 | **21/10/2026 · Projeto final DevOps** | [RateMedia — aplicação, testes, CI/CD e deploy](Registro%20de%20Aulas/Aula%2010%20-%2021-10-2026/ProjetoFinal.md) |
 
 > A Aula 03 reúne diferentes partes da mesma atividade prática. Consulte o [índice dos registros](Registro%20de%20Aulas/README.md) para ver os detalhes e seguir a sequência disponível.
 
@@ -32,6 +33,7 @@ Cada registro de aula apresenta o tema estudado e organiza as **atividades propo
 
 - [Documentação e apresentações das aulas](Documenta%C3%A7%C3%A3o%20dos%20conte%C3%BAdos/)
 - [Material da Aula 09 — Documentação de Software](Documenta%C3%A7%C3%A3o%20dos%20conte%C3%BAdos/Aula%2009%20-%20Documenta%C3%A7%C3%A3o%20de%20Software.pdf)
+- [Material da Aula 10 — Projeto DevOps](Documenta%C3%A7%C3%A3o%20dos%20conte%C3%BAdos/Aula%2010%20-%20Projeto%20DevOps.pdf)
 - [Referências apresentadas na disciplina](Refer%C3%AAncias%20apresentadas/)
 - [Relatório completo da análise de pipelines da Aula 06](https://github.com/FelipeFDSDev/frases-filosofia/blob/main/analise%20de%203%20projetos%20com%20pipelines/analise-pipelines-github.md)
 

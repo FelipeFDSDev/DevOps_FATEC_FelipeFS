@@ -166,4 +166,4 @@ A atividade mostra que um README útil precisa orientar dois públicos: quem que
 
 ---
 
-[← Aula 07](../Aula%2007%20-%2016-09-2026/ConteudoAula07.md) · [Índice das aulas](../README.md) · [Início do repositório](../../README.md)
+[← Aula 07](../Aula%2007%20-%2016-09-2026/ConteudoAula07.md) · [Próxima aula: Projeto Final →](../Aula%2010%20-%2021-10-2026/ProjetoFinal.md) · [Índice](../README.md) · [Início](../../README.md)
